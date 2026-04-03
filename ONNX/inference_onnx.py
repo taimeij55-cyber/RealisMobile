@@ -12,7 +12,7 @@ from transformers import CLIPTokenizer
 
 class SD15ONNXPipeline:
     def __init__(self, onnx_dir):
-        """初始化ONNX推理管线"""
+        """初始化ONNX推理pipeline"""
         tokenizer_dir = os.path.join(onnx_dir, "tokenizer")
         if os.path.exists(tokenizer_dir):
             self.tokenizer = CLIPTokenizer.from_pretrained(tokenizer_dir)
